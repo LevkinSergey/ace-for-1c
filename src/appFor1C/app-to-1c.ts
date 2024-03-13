@@ -1,21 +1,8 @@
-import {
-  ActionCreatorWithoutPayload,
-  CaseReducerActions,
-  Dispatch,
-  SliceCaseReducers,
-} from "@reduxjs/toolkit";
-import { ExtractDispatchExtensions } from "@reduxjs/toolkit/dist/tsHelpers";
-import { AppTo1CWindow } from "../react-app-env";
-import { increment, selectCount } from "../store/counter";
-import { globalDispatch, store } from "../store/store";
+import { AppTo1CWindow } from "@/app-env";
 
 export interface AppTo1C {
   setBaseUrl: (url: string) => void;
   close: () => void;
-  counter: {
-    increment: any;
-    get: any;
-  };
 }
 
 const setBaseUrl = (url: string): void => {
@@ -26,19 +13,12 @@ const setBaseUrl = (url: string): void => {
   }
 };
 
-const close = () => {};
+const close = () => { };
 
 export const initAppTo1C = () => {
   window.appTo1C = {
     setBaseUrl,
     close,
-    counter: {
-      increment: () => {
-        globalDispatch(increment());
-        return true;
-      },
-      get: () => selectCount(store.getState()),
-    },
   };
 };
 
