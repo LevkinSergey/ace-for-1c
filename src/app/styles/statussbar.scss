@@ -1,0 +1,20 @@
+#statusBar {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 22px;
+  // width: 30px;
+  // background: #028fef;
+  color: #fff;
+}
+
+.ace_status-indicator {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  border-left: 1px solid;
+  background: #028fef;
+}

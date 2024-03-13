@@ -7,8 +7,8 @@ import "ace-builds/src-noconflict/ext-language_tools";
 // import "ace-builds/src-noconflict/ext-emmet";
 import "ace-builds/src-noconflict/ext-inline_autocomplete"
 import { AppTo1CWindow } from '@/app-env';
-// import { StatusBar } from "ace-builds/src-noconflict/ext-statusbar";
-// import "ace-builds/src-noconflict/ext-linking"
+import { StatusBar } from "ace-builds/src-noconflict/ext-statusbar";
+import "ace-builds/src-noconflict/ext-linking"
 // import 'ace-builds/src-noconflict/ext-prompt'
 
 import "../esm-resolver";
@@ -17,7 +17,7 @@ window.editor = ace.edit("editor");
 window.editor.session.setUseWorker(false)
 
 window.editor.setTheme("ace/theme/ones");
-window.editor.session.setMode("ace/mode/bsl_query");
+window.editor.session.setMode("ace/mode/_1c");
 
 window.editor.setOptions({
   selectionStyle: 'line',
@@ -26,9 +26,12 @@ window.editor.setOptions({
   enableBasicAutocompletion: true,
   enableSnippets: true,
   enableLiveAutocompletion: true,
-
+  enableInlineAutocompletion: true,
+  enableLinking: true
 });
 window.editor.setHighlightSelectedWord(true);
+// window.editor.execCommand('enableLinking', true);
 
+// const statusBar = new StatusBar(window.editor, document.getElementById("statusBar"))
 
 declare var window: AppTo1CWindow;
