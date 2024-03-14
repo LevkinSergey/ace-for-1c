@@ -1,5 +1,4 @@
-import { UIEvent } from "react";
-import { AppTo1CWindow } from "../react-app-env";
+import { AppTo1CWindow } from "@/app-env";
 
 export interface MouseEventTo1C extends MouseEvent {
   eventData1C: {
@@ -8,7 +7,7 @@ export interface MouseEventTo1C extends MouseEvent {
   };
 }
 
-export class MouseEventTo1C extends MouseEvent {}
+export class MouseEventTo1C extends MouseEvent { }
 
 export function emitEventTo1C(name: string, data: any, event: Event | UIEvent) {
   //отключаем стандартную обработку события
