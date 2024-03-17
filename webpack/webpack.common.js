@@ -39,6 +39,7 @@ module.exports = {
       minSize: 20000,
       minRemainingSize: 0,
       minChunks: 1,
+      maxSize: 50000,
       maxAsyncRequests: 30,
       maxInitialRequests: 30,
       enforceSizeThreshold: 50000,
@@ -159,8 +160,8 @@ module.exports = {
         keepClosingSlash: true,
         minifyJS: true,
         minifyCSS: true,
-        minifyURLs: true,
-      },
+        minifyURLs: true
+      }
     }),
     // new HtmlWebpackPlugin({
     //   title: 'About page',
@@ -177,7 +178,7 @@ module.exports = {
       // if you don't need hash:
       filename: `[name].css`,
       chunkFilename: '[id].css'
-    }),
+    })
 
     // copy files from target to destination folder
     // new CopyWebpackPlugin({

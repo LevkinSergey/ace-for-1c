@@ -23,9 +23,9 @@ module.exports = merge(commonConfig, {
     // new CompressionPlugin({
     //   exclude: /\/static/,
     // }),
-    new webpack.optimize.LimitChunkCountPlugin({
-      maxChunks: 1,
-    }),
+    // new webpack.optimize.LimitChunkCountPlugin({
+    //   maxChunks: 1
+    // })
   ],
   module: {
     rules: []
