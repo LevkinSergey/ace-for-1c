@@ -6,6 +6,7 @@ export interface AppTo1C {
   close: () => void
   setSelection: (startRow: number, startColumn: number, endRow: number, endColumn: number) => void
   setGenerateModificationEvent: (value: boolean) => void
+  loadScript: (url: string) => void
 }
 
 const setBaseUrl = (url: string): void => {
@@ -24,11 +25,19 @@ const close = () => {
   console.log('close')
 }
 
+const loadScript = (url: string) => {
+  const newel = document.createElement('script')
+  newel.type = 'text/javascript'
+  newel.src = url
+  document.body.appendChild(newel)
+}
+
 window.appTo1C = {
   setBaseUrl,
   close,
   setSelection,
-  setGenerateModificationEvent
+  setGenerateModificationEvent,
+  loadScript
 }
 
 declare var window: AppTo1CWindow
