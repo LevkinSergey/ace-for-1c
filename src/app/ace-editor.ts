@@ -1,23 +1,19 @@
 import ace from 'ace-builds'
-// import "../ace-extension/on"
-import "ace-builds/src-noconflict/ext-searchbox";
-// import { CommandBarTooltip } from "ace-builds/src-noconflict/ext-command_bar";
-// import "ace-builds/src-noconflict/snippets/javascript"
-import "ace-builds/src-noconflict/ext-language_tools";
-// import "ace-builds/src-noconflict/ext-emmet";
-import "ace-builds/src-noconflict/ext-inline_autocomplete"
-import { AppTo1CWindow } from '@/app-env';
-import { StatusBar } from "ace-builds/src-noconflict/ext-statusbar";
-import "ace-builds/src-noconflict/ext-linking"
-// import 'ace-builds/src-noconflict/ext-prompt'
+import 'ace-builds/src-noconflict/ext-searchbox'
+import 'ace-builds/src-noconflict/ext-language_tools'
+import 'ace-builds/src-noconflict/ext-inline_autocomplete'
+import 'ace-builds/src-noconflict/ext-linking'
+import { AppTo1CWindow } from '@/app-env'
+// import { StatusBar } from 'ace-builds/src-noconflict/ext-statusbar'
 
-import "../esm-resolver";
+import '../esm-resolver'
+import { HelperAceEditor } from './EditorHelper'
 
-window.editor = ace.edit("editor");
+window.editor = ace.edit('editor')
 window.editor.session.setUseWorker(false)
 
-window.editor.setTheme("ace/theme/ones");
-window.editor.session.setMode("ace/mode/_1c");
+window.editor.setTheme('ace/theme/ones')
+window.editor.session.setMode('ace/mode/_1c')
 
 window.editor.setOptions({
   selectionStyle: 'line',
@@ -28,10 +24,19 @@ window.editor.setOptions({
   enableLiveAutocompletion: true,
   enableInlineAutocompletion: true,
   enableLinking: true
-});
-window.editor.setHighlightSelectedWord(true);
-// window.editor.execCommand('enableLinking', true);
+})
+window.editor.setHighlightSelectedWord(true)
 
 // const statusBar = new StatusBar(window.editor, document.getElementById("statusBar"))
 
-declare var window: AppTo1CWindow;
+export const setSelection = (startRow: number, startColumn: number, endRow: number, endColumn: number) => {
+  window.editor.clearSelection()
+  var rangeEditor = new ace.Range(startRow, startColumn, endRow, endColumn)
+  var selection = window.editor.getSelection()
+  selection.setSelectionRange(rangeEditor)
+  window.editor.centerSelection()
+}
+
+window.editorHelper = new HelperAceEditor()
+
+declare var window: AppTo1CWindow
