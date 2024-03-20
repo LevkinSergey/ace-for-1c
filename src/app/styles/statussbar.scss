@@ -5,16 +5,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 22px;
-  // width: 30px;
-  // background: #028fef;
-  color: #fff;
+  height: 20px;
+  background-color: rgb(245, 245, 245);
+  color: gray;
 }
-
 .ace_status-indicator {
-  color: #fff;
+  color: gray;
   position: absolute;
   right: 0;
   border-left: 1px solid;
-  background: #028fef;
 }

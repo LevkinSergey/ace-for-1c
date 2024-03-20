@@ -4,7 +4,7 @@ import 'ace-builds/src-noconflict/ext-language_tools'
 import 'ace-builds/src-noconflict/ext-inline_autocomplete'
 import 'ace-builds/src-noconflict/ext-linking'
 import { AppTo1CWindow } from '@/app-env'
-// import { StatusBar } from 'ace-builds/src-noconflict/ext-statusbar'
+import { StatusBar } from 'ace-builds/src-noconflict/ext-statusbar'
 
 import '../esm-resolver'
 import { HelperAceEditor } from './EditorHelper'
@@ -27,7 +27,7 @@ window.editor.setOptions({
 })
 window.editor.setHighlightSelectedWord(true)
 
-// const statusBar = new StatusBar(window.editor, document.getElementById("statusBar"))
+const statusBar = new StatusBar(window.editor, document.getElementById('statusBar'))
 
 export const setSelection = (startRow: number, startColumn: number, endRow: number, endColumn: number) => {
   window.editor.clearSelection()

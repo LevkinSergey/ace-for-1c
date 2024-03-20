@@ -52,6 +52,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
+    "events-polyfill": "^2.1.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
     "json-minimizer-webpack-plugin": "^4.0.0",

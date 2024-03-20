@@ -16,21 +16,19 @@ const setBaseUrl = (url: string): void => {
   }
 }
 
-const close = () => {}
-
-export const initAppTo1C = () => {
-  window.appTo1C = {
-    setBaseUrl,
-    close,
-    setSelection,
-    setGenerateModificationEvent: (value: boolean) => {
-      window.editorHelper.setGenerateModificationEvent(value)
-    }
-  }
+const setGenerateModificationEvent = (value: boolean) => {
+  window.editorHelper.setGenerateModificationEvent(value)
 }
 
-window.addEventListener('load', () => {
-  initAppTo1C()
-})
+const close = () => {
+  console.log('close')
+}
+
+window.appTo1C = {
+  setBaseUrl,
+  close,
+  setSelection,
+  setGenerateModificationEvent
+}
 
 declare var window: AppTo1CWindow

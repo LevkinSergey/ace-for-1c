@@ -10,12 +10,7 @@
   "compilerOptions": {
     "target": "ES5",
     "module": "CommonJS",
-    "lib": [
-      "ESNext",
-      "ES6",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ESNext", "ES6", "DOM", "DOM.Iterable"],
     "jsx": "react",
     "noEmit": true,
     "sourceMap": true,
@@ -35,24 +30,10 @@
     // paths:
     "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
-  "exclude": [
-    "scripts",
-    "webpack",
-    "dist",
-    "node_modules",
-    "**/*.spec.ts"
-  ],
+  "exclude": ["scripts", "webpack", "dist", "node_modules", "**/*.spec.ts"],
   // ? .jsx seems useless
-  "include": [
-    "src/*.d.ts",
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.ts",
-    "src/**/*.tsx"
-  ]
+  "include": ["src/*.d.ts", "src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
 }
