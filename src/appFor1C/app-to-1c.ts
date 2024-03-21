@@ -7,6 +7,7 @@ export interface AppTo1C {
   setSelection: (startRow: number, startColumn: number, endRow: number, endColumn: number) => void
   setGenerateModificationEvent: (value: boolean) => void
   loadScript: (url: string) => void
+  setMode: (mode: string) => void
 }
 
 const setBaseUrl = (url: string): void => {
@@ -32,12 +33,17 @@ const loadScript = (url: string) => {
   document.body.appendChild(newel)
 }
 
+const setMode = (mode: string) => {
+  window.editor.session.setMode(`ace/mode/${mode}`)
+}
+
 window.appTo1C = {
   setBaseUrl,
   close,
   setSelection,
   setGenerateModificationEvent,
-  loadScript
+  loadScript,
+  setMode
 }
 
 declare var window: AppTo1CWindow

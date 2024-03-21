@@ -1,6 +1,6 @@
 {
   "name": "ace-for-1c",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Реализация сборки ace для работы внутри 1С",
   "main": "index.js",
   "scripts": {
