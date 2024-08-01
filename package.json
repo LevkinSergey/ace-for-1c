@@ -1,6 +1,6 @@
 {
   "name": "ace-for-1c",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Реализация сборки ace для работы внутри 1С",
   "main": "index.js",
   "scripts": {
@@ -52,7 +52,6 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
-    "events-polyfill": "^2.1.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
     "json-minimizer-webpack-plugin": "^4.0.0",
@@ -68,17 +67,17 @@
     "webpack-dev-server": "^4.15.1",
     "webpack-merge": "^5.10.0"
   },
-  "author": "https://github.com/vedees",
+  "author": "https://github.com/LevkinSergey",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vedees/webpack-template.git"
+    "url": "git+https://github.com/LevkinSergey/ace-for-1c.git"
   },
   "bugs": {
-    "url": "https://github.com/vedees/webpack-template/issues"
+    "url": "https://github.com/LevkinSergey/ace-for-1c/issues"
   },
   "keywords": [
-    "webpack",
-    "babel",
+    "ace",
+    "1c",
     "typescript",
     "scss"
   ]

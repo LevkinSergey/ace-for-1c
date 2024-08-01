@@ -1,14 +1,5 @@
 import { AppTo1CWindow } from '@/app-env'
 
-export interface MouseEventTo1C extends MouseEvent {
-  eventData1C: {
-    name: string
-    data: string
-  }
-}
-
-export class MouseEventTo1C extends MouseEvent {}
-
 export function emitEventTo1C(name: string, data: any, event?: Event | UIEvent) {
   //отключаем стандартную обработку события
   if (event) {
@@ -20,22 +11,17 @@ export function emitEventTo1C(name: string, data: any, event?: Event | UIEvent) 
   if (typeof eventData === 'object') {
     eventData = JSON.stringify(eventData)
   }
-  let lastEvent = new MouseEventTo1C('click', {
-    bubbles: false,
+  let lastEvent = new CustomEvent('click', {
+    bubbles: true,
     cancelable: true,
-    composed: false
+    composed: false,
+    detail: {
+      name: name,
+      data: eventData
+    }
   })
   lastEvent.preventDefault()
-  lastEvent.eventData1C = {
-    name: name,
-    data: eventData
-  }
-  if (window.isWebClient) {
-    return document.body.dispatchEvent(lastEvent)
-  }
-  lastEvent.stopPropagation()
-
-  return dispatchEvent(lastEvent)
+  return document.dispatchEvent(lastEvent)
 }
 
 declare var window: AppTo1CWindow
