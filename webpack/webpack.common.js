@@ -22,12 +22,40 @@ module.exports = {
       path: `${defines.src}/index.ts`
     },
     {
-      key: 'keymodes',
-      path: `${defines.src}/keyboards-modes.js`
+      key: 'keycodes',
+      path: `${defines.src}/chunksmodes/keycodes.js`
     },
     {
-      key: 'htmlmodes',
-      path: `${defines.src}/htmlmodes.js`
+      key: 'htmljs',
+      path: `${defines.src}/chunksmodes/htmljs.js`
+    },
+    {
+      key: 'ones',
+      path: `${defines.src}/chunksmodes/ones.js`
+    },
+    {
+      key: 'xml',
+      path: `${defines.src}/chunksmodes/xml.js`
+    },
+    {
+      key: 'sqlmodes',
+      path: `${defines.src}/chunksmodes/sql.js`
+    },
+    {
+      key: 'yamlmodes',
+      path: `${defines.src}/chunksmodes/yaml.js`
+    },
+    {
+      key: 'json',
+      path: `${defines.src}/chunksmodes/json.js`
+    },
+    {
+      key: 'markdown',
+      path: `${defines.src}/chunksmodes/markdown.js`
+    },
+    {
+      key: 'diff',
+      path: `${defines.src}/chunksmodes/diff.js`
     }
   ],
   baseconfig: {
