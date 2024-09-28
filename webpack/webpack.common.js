@@ -24,6 +24,10 @@ module.exports = {
     {
       key: 'keymodes',
       path: `${defines.src}/keyboards-modes.js`
+    },
+    {
+      key: 'htmlmodes',
+      path: `${defines.src}/htmlmodes.js`
     }
   ],
   baseconfig: {
