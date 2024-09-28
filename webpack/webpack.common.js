@@ -30,19 +30,15 @@ module.exports = {
       path: `${defines.src}/chunksmodes/htmljs.js`
     },
     {
-      key: 'ones',
-      path: `${defines.src}/chunksmodes/ones.js`
-    },
-    {
       key: 'xml',
       path: `${defines.src}/chunksmodes/xml.js`
     },
     {
-      key: 'sqlmodes',
+      key: 'sql',
       path: `${defines.src}/chunksmodes/sql.js`
     },
     {
-      key: 'yamlmodes',
+      key: 'yaml',
       path: `${defines.src}/chunksmodes/yaml.js`
     },
     {

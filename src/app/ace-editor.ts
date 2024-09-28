@@ -7,6 +7,7 @@ import { AppTo1CWindow } from '@/app-env'
 import { StatusBar } from 'ace-builds/src-noconflict/ext-statusbar'
 
 import '../esm-resolver'
+import '../chunksmodes/ones'
 import { HelperAceEditor } from './EditorHelper'
 
 window.editor = ace.edit('editor')
